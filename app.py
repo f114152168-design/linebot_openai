@@ -36,7 +36,7 @@ def handle_message(event):
     try:
         # 3. 修改個性：在 messages 中加入 system role
         response = openai.ChatCompletion.create(
-            model="gpt-5-nano"", # 註：目前官方尚未開放 gpt-5，建議先用 3.5 或 4
+            model="gpt-5-nano", # 註：目前官方尚未開放 gpt-5，建議先用 3.5 或 4
             messages=[
                 {"role": "system", "content": "你是一位專業的占星師，說話優雅且富有禪意，回答時會加入一些星座相關的詞彙。"},
                 {"role": "user", "content": text1}
